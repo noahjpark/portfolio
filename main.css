@@ -7,7 +7,7 @@
 
 html{
   font-size: 10px;
-  font-family: 'Crimson Text', ;
+  font-family: 'Tomorrow', 'Lato';
   color: #eee;
 }
 
@@ -48,6 +48,7 @@ img{
   height: 100%;
   margin: 0 auto;
   position: relative;
+  user-select: none;
 }
 
 .section-heading{
@@ -111,7 +112,7 @@ header{
   position: fixed;
   top: -100vh;
   z-index: 50;
-  background-color: #16162d;
+  background: linear-gradient(to bottom, #b6b8ba, #252526);
   border-bottom-right-radius: 100%;
   border-bottom-left-radius: 100%;
   transition: all 650ms cubic-bezier(1,0,0,1);
@@ -131,14 +132,17 @@ li{
 }
 
 .nav-link{
-  font-family: 'Crimson', ;
+  font-family: 'Tomorrow', 'Lato';
   font-size: 5rem;
   padding: 1rem;
+  background: linear-gradient(to bottom, #ffffff, #abaeb1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-link:hover,
 .nav-link:focus{
-  background: linear-gradient(to top, #ffe838, #fd57bf);
+  background: linear-gradient(to top, #000000, #5c5d5e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -167,7 +171,7 @@ li{
 }
 
 .bar{
-  background: linear-gradient(to right, #ffe838, #fd57bf);
+  background: linear-gradient(to right, #b6b8ba, #252526);
   width: 100%;
   height: 4px;
   border-radius: .8rem;
@@ -208,7 +212,7 @@ li{
 
 .landing-text h1{
   font-size: 20rem;
-  font-family: 'Crimson Text', ;
+  font-family: 'Tomorrow', 'Lato';
   background: linear-gradient(to bottom, #ffffff, #85888c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -219,7 +223,7 @@ li{
 .landing-text h6{
   font-size: 4rem;
   font-weight: 300;
-  font-family: 'Open Sans', ;
+  font-family: 'Tomorrow', 'Lato' ;
   background: linear-gradient(to bottom, #ffffff, #85888c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -240,6 +244,7 @@ li{
   text-transform: uppercase;
   line-height: 0;
   margin-bottom: 6rem;
+  user-select: none;
 }
 
 .about-heading h1{
@@ -289,11 +294,16 @@ li{
 
 
 /*Start skills*/
+.container h1{
+  user-select: none;
+}
 
 .container h6{
   background: linear-gradient(to bottom, #ffffff, #b0afac);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  user-select: none;
+  text-transform: uppercase;
 }
 
 .my-skills{
@@ -313,7 +323,7 @@ li{
 }
 
 .skill h1{
-  font-family: 'Crimson Text', ;
+  font-family: 'Tomorrow', 'Lato';
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 2rem -2px 2rem 0;
@@ -323,10 +333,10 @@ li{
 }
 
 .skill h4{
-  background: linear-gradient(to bottom, #ffffff, #b0afac);
+  background: linear-gradient(to bottom, #ffffff, #bbbab6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'Open Sans', ;
+  font-family: 'Tomorrow', 'Lato';
   font-size: 1rem;
 }
 
@@ -381,7 +391,7 @@ li{
   font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 300;
-  opacity: 0.3;
+  opacity: 0.7;
 }
 
 .portfolio-description .cta{
@@ -389,19 +399,19 @@ li{
   margin-top: 2.5 rem;
   font-size: 1.5 rem;
   text-transform: uppercase;
-  color: #3883ff;
+  color: #971ab6;
   transition: color 650ms;
 }
 
 .portfolio-description .cta:hover{
-  color: #2f67cd;
+  color: #6f0a88;
 }
 /*End portfolio*/
 
 
 /*Start timeline*/
 .timeline ul{
-  border-left: 4px solid #ffe838;
+  border-left: 4px solid #bec1c4;
   border-radius: .8rem;
   background-color: rgba(0,0,0,0.05);
   margin: 0 auto;
@@ -451,7 +461,7 @@ li{
 
 .timeline .date::after{
   content: '';
-  box-shadow: 0 0 0 4px #fd57bf;
+  box-shadow: 0 0 0 4px #3c184a;
   border-radius: 100%;
   left: -8rem;
   height: 1.5rem;
@@ -482,12 +492,12 @@ textarea{
   padding: 1rem;
   margin-bottom: 5px;
   border: none;
-  outline-color: #fd57bf;
+  outline-color: #300f3d;
 }
 
 input[type="submit"]{
   width: initial;
-  background-color: #fd57bf;
+  background: linear-gradient(to top, #17031f, #300f3d);
   color: #eee;
   padding: 1rem 2rem;
   border-radius: .8rem;
@@ -496,8 +506,8 @@ input[type="submit"]{
 }
 
 input[type="submit"]:hover{
-  color: #221e3f;
-  background-color: #ffe838;
+  color: #9e3dc4;
+  background-color: #9e3dc4;
 }
 /*End contact*/
 
@@ -506,7 +516,7 @@ input[type="submit"]:hover{
 .copyright{
   width: 100%;
   text-align: center;
-  background-color: #16162d;
+  background: linear-gradient(to top, #17031f, #300f3d);
   padding: 2rem 0;
   position: relative;
 }
@@ -539,13 +549,13 @@ input[type="submit"]:hover{
 /*Start animations*/
 @keyframes pulse{
   0%{
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.99);
+    box-shadow: 0 0 0 0 rgba(60, 24, 74, 0.99);
   }
   70%{
-    box-shadow: 0 0 0 2rem rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 2rem rgba(60, 24, 74, 0);
   }
   100%{
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(60, 24, 74, 0);
   }
 }
 /*End animations*/
