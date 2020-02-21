@@ -1,4 +1,4 @@
-/*Start global*/
+/*Start  global*/
 *{
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 
 html{
   font-size: 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Crimson Text', ;
   color: #eee;
 }
 
@@ -30,6 +30,9 @@ a{
 p{
   font-size: 1.8rem;
   font-weight: 300;
+  background: linear-gradient(to bottom, #ffffff, #b0afac);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 img{
@@ -128,14 +131,14 @@ li{
 }
 
 .nav-link{
-  font-family: 'The Historia Demo', sans-serif;
+  font-family: 'Crimson', ;
   font-size: 5rem;
   padding: 1rem;
 }
 
 .nav-link:hover,
 .nav-link:focus{
-  background: linear-gradient(to, top, #ffe838, #fd57bf);
+  background: linear-gradient(to top, #ffe838, #fd57bf);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -205,8 +208,8 @@ li{
 
 .landing-text h1{
   font-size: 20rem;
-  font-family: 'The Historia Demo', sans-serif;
-  background: linear-gradient(to, top, #ffe838, #fd57bf);
+  font-family: 'Crimson Text', ;
+  background: linear-gradient(to bottom, #ffffff, #85888c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 1rem;
@@ -214,8 +217,13 @@ li{
 }
 
 .landing-text h6{
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 300;
+  font-family: 'Open Sans', ;
+  background: linear-gradient(to bottom, #ffffff, #85888c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  user-select: none;
 }
 /*End header*/
 
@@ -275,12 +283,19 @@ li{
 }
 
 .fa-github-square:hover{
-  color: #211F1F;
+  color: #6e5494;
 }
 /*End about*/
 
 
-/*Start services*/
+/*Start skills*/
+
+.container h6{
+  background: linear-gradient(to bottom, #ffffff, #b0afac);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .my-skills{
   margin-top: 10rem;
   display: grid;
@@ -298,16 +313,28 @@ li{
 }
 
 .skill h1{
+  font-family: 'Crimson Text', ;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 2rem -2px 2rem 0;
+  background: linear-gradient(to bottom, #ffffff, #85888c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skill h4{
+  background: linear-gradient(to bottom, #ffffff, #b0afac);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Open Sans', ;
+  font-size: 1rem;
 }
 
 .icon-container{
   width: 10rem;
   height: 10rem;
-  border: 3px solid #ffe838;
-  background-color: #fd57bf;
+  border: 3px solid #ffffff;
+  background-color: #373b38;
   margin-bottom: 2rem;
   display: flex;
   transform: rotate(45deg);
@@ -319,7 +346,7 @@ li{
   margin: auto;
   transform: rotate(-45deg);
 }
-/*End services*/
+/*End skills*/
 
 
 /*Start portfolio*/
@@ -336,6 +363,8 @@ li{
 
 .portfolio-img{
   flex: 1;
+  margin-left: 5rem;
+  margin-right: 8rem;
 }
 
 .portfolio-description{
