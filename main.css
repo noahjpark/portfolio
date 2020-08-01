@@ -23,7 +23,7 @@ body{
 }
 
 section{
-  padding: 6rem 0;
+  padding: 12rem 0;
 }
 
 a{
@@ -496,7 +496,6 @@ li{
 
 
 /*Start skills*/
-
 .container h1{
   user-select: none;
 }
