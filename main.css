@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
+
 /*Start  global*/
 *{
   margin: 0;
@@ -7,15 +9,17 @@
 
 html{
   font-size: 10px;
-  font-family: 'Tomorrow', 'Lato';
+  font-family: 'Montserrat', 'Lato';
   color: #eee;
 }
 
 body{
   width: 100%;
   height: 100%;
-  background: url("images/purplelines.jpg") no-repeat center fixed;
-  background-size: cover;
+  background-color: rgb(28, 28, 30);
+  background: linear-gradient(45deg, #181661, rgb(11, 70, 70),#5f0d0d, #480a5f);
+  background-size: 300%;
+  animation: gradient 15s ease infinite;
 }
 
 section{
@@ -24,7 +28,7 @@ section{
 
 a{
   text-decoration: none;
-  color: #eee;
+  color: rgb(255, 255, 255);
 }
 
 p{
@@ -39,6 +43,198 @@ img{
   width: 100%;
 }
 /*End global*/
+
+/*Start New Header*/
+.con {
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 350px;
+  height: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.block {
+  width: 0%;
+  height: inherit;
+  background: transparent;
+  position: absolute;
+  animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+  display: flex;
+}
+
+.title h1 {
+  font-family: 'Montserrat';
+  color: #ffffff;
+  font-size: 64px;
+  -webkit-animation: mainFadeIn 2s forwards;
+  -o-animation: mainFadeIn 2s forwards;
+  animation: mainFadeIn 2s forwards;
+  animation-delay: 1.6s;
+  opacity: 0;
+  display: flex;
+  align-items: baseline;
+  position: relative;
+}
+
+span {
+  width: 0px;
+  height: 0px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+
+  background: #ffffff;
+  -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
+  animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
+  animation-delay: 2s;
+  margin-left: 5px;
+  margin-top: -10px;
+  position: absolute;
+  bottom: 13px;
+  right: -12px;
+}
+
+.role {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-top: -10px;
+}
+
+.block {
+  width: 0%;
+  height: inherit;
+  background: transparent;
+  position: absolute;
+  animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+  animation-delay: 2s;
+  display: flex;
+}
+
+p {
+  animation: secFadeIn 2s forwards;
+  animation-delay: 3.2s;
+  opacity: 0;
+  font-weight: 600;
+  font-family: 'Lato';
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  position: relative;
+}
+
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+
+  }
+  50% {
+    width: 100%;
+    left: 0;
+
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
+
+  }
+  50% {
+    width: 100%;
+    left: 0;
+
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: #ffffff;
+    border: 0px solid #ddd;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    opacity: 1;
+    bottom: 45px;
+  }
+   65% {
+      width: 7px;
+    height: 7px;
+      bottom: 0px;
+      width: 15px
+   }
+   80% {
+      width: 10px;
+    height: 10px;
+      bottom: 20px
+   }
+  100% {
+    width: 7px;
+    height: 7px;
+    background: #ffffff;
+    border: 0px solid #222;
+    bottom: 13px;
+
+  }
+}
+
+@keyframes secFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+/*End New Header*/
+
 
 
 /*Start reusable*/
@@ -59,7 +255,7 @@ img{
 
 .section-heading h1{
   font-size: 3.5rem;
-  color: rgba(255, 255, 255, .5);
+  color: #ffffff;
   text-transform: uppercase;
   font-weight: 300;
   position: relative;
@@ -90,8 +286,8 @@ img{
 }
 
 .section-heading h6{
-  font-size: 1.6rem;
-  font-weight: 300;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 .has-margin-right{
@@ -112,7 +308,10 @@ header{
   position: fixed;
   top: -100vh;
   z-index: 50;
-  background: url("images/purplelines.jpg") no-repeat center fixed;
+  background-color: rgb(28, 28, 30);
+  background: linear-gradient(45deg, #181661, rgb(11, 70, 70),#5f0d0d, #480a5f);
+  background-size: 300%;
+  animation: gradient 15s ease infinite;
   border-bottom-right-radius: 100%;
   border-bottom-left-radius: 100%;
   transition: all 650ms cubic-bezier(1,0,0,1);
@@ -132,17 +331,17 @@ li{
 }
 
 .nav-link{
-  font-family: 'Tomorrow', 'Lato';
+  font-family: 'Montserrat', 'Lato';
   font-size: 5rem;
   padding: 1rem;
-  background: linear-gradient(to bottom, #ffffff, #abaeb1);
+  background: #ffffff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .nav-link:hover,
 .nav-link:focus{
-  background: linear-gradient(to top, #abaeb1, #641980);
+  background: linear-gradient(to top, #abaeb1, #641980, #abaeb1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -171,7 +370,7 @@ li{
 }
 
 .bar{
-  background: linear-gradient(to right, #abaeb1, #641980);
+  background: linear-gradient(to right, #ad0505, #350647);
   width: 100%;
   height: 4px;
   border-radius: .8rem;
@@ -211,9 +410,9 @@ li{
 }
 
 .landing-text h1{
-  font-size: 20rem;
-  font-family: 'Tomorrow', 'Lato';
-  background: linear-gradient(to bottom, #ffffff, #85888c);
+  font-size: 15rem;
+  font-family: 'Montserrat';
+  background: #ffffff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 1rem;
@@ -222,9 +421,9 @@ li{
 
 .landing-text h6{
   font-size: 4rem;
-  font-weight: 300;
-  font-family: 'Tomorrow', 'Lato' ;
-  background: linear-gradient(to bottom, #ffffff, #85888c);
+  font-weight: 150;
+  font-family: 'Lato';
+  background: #ffffff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   user-select: none;
@@ -243,18 +442,19 @@ li{
   text-align: center;
   text-transform: uppercase;
   line-height: 0;
-  margin-bottom: 6rem;
+  margin-bottom: 10rem;
   user-select: none;
 }
 
 .about-heading h1{
   font-size: 10rem;
-  opacity: .5;
+  opacity: .85;
 }
 
 .about-heading h6{
   font-size: 2rem;
   font-weight: 300;
+  opacity: .5;
 }
 
 .profile-img{
@@ -264,6 +464,8 @@ li{
 
 .about-details{
   flex: 1;
+  text-align: center;
+  opacity: 1;
 }
 
 .social-media{
@@ -300,7 +502,7 @@ li{
 }
 
 .container h6{
-  background: linear-gradient(to bottom, #ffffff, #b0afac);
+  background: #ffffff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   user-select: none;
@@ -324,20 +526,20 @@ li{
 }
 
 .skill h1{
-  font-family: 'Tomorrow', 'Lato';
+  font-family: 'Montserrat', 'Lato';
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 2rem -2px 2rem 0;
-  background: linear-gradient(to bottom, #ffffff, #85888c);
+  background: #ffffff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .skill h4{
-  background: linear-gradient(to bottom, #ffffff, #bbbab6);
+  background: #ffffff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'Tomorrow', 'Lato';
+  font-family: 'Montserrat', 'Lato';
   font-size: 1rem;
 }
 
@@ -345,14 +547,14 @@ li{
   width: 10rem;
   height: 10rem;
   border: 3px solid #ffffff;
-  background-color: #373b38;
+  background-color: #000000;
   margin-bottom: 2rem;
   display: flex;
   transform: rotate(45deg);
 }
 
 .icon-container i{
-  color: #ffe838;
+  color: #22f688;
   font-size: 5rem;
   margin: auto;
   transform: rotate(-45deg);
@@ -400,12 +602,12 @@ li{
   margin-top: 2.5 rem;
   font-size: 1.5 rem;
   text-transform: uppercase;
-  color: #971ab6;
+  color: #000000;
   transition: color 650ms;
 }
 
 .portfolio-description .cta:hover{
-  color: #6f0a88;
+  color: #8617a1;
 }
 /*End portfolio*/
 
@@ -462,62 +664,23 @@ li{
 
 .timeline .date::after{
   content: '';
-  box-shadow: 0 0 0 4px #3c184a;
+  box-shadow: 0 0 0 4px #ffffff;
   border-radius: 100%;
   left: -8rem;
   height: 1.5rem;
   width: 1.5rem;
-  background-color: #313534;
+  background-color: #000000;
 }
 /*End timeline*/
-
-
-/*Start contact*/
-.contact{
-  background-color: #211F1F;
-}
-
-form{
-  width: 70%;
-  margin: 0 auto;
-}
-
-form label{
-  font-size: 1.5rem;
-}
-
-input,
-select,
-textarea{
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 5px;
-  border: none;
-  outline-color: #300f3d;
-}
-
-input[type="submit"]{
-  width: initial;
-  background: linear-gradient(to top, #17031f, #300f3d);
-  color: #eee;
-  padding: 1rem 2rem;
-  border-radius: .8rem;
-  cursor: pointer;
-  transition: background-color 650ms;
-}
-
-input[type="submit"]:hover{
-  color: #9e3dc4;
-  background-color: #9e3dc4;
-}
-/*End contact*/
 
 
 /*Start footer*/
 .copyright{
   width: 100%;
   text-align: center;
-  background: linear-gradient(to top, #17031f, #300f3d);
+  background: linear-gradient(45deg, #17031f, #ad0505, #17031f);
+  background-size: 200%;
+  animation: gradient 7s ease infinite;
   padding: 2rem 0;
   position: relative;
 }
@@ -526,7 +689,9 @@ input[type="submit"]:hover{
   position: absolute;
   width: 5rem;
   height: 5rem;
-  background-color: #eee;
+  background: linear-gradient(45deg, #3d0653, #ad0505, #3d0653);
+  background-size: 100%;
+  animation: gradient 7s ease infinite;;
   top: -2.5rem;
   right: 5rem;
   border-radius: 100%;
@@ -536,7 +701,8 @@ input[type="submit"]:hover{
 }
 
 .up i{
-  color: #16162d;
+  color: #ffffff;
+  opacity: 0.5;
   font-size: 2rem;
   margin: auto;
 }
@@ -550,13 +716,25 @@ input[type="submit"]:hover{
 /*Start animations*/
 @keyframes pulse{
   0%{
-    box-shadow: 0 0 0 0 rgba(60, 24, 74, 0.99);
+    box-shadow: 0 0 0 0 rgba(185, 14, 14, 0.75);
   }
   70%{
-    box-shadow: 0 0 0 2rem rgba(60, 24, 74, 0);
+    box-shadow: 0 0 0 2rem rgba(185, 14, 14, 0);
   }
   100%{
-    box-shadow: 0 0 0 0 rgba(60, 24, 74, 0);
+    box-shadow: 0 0 0 0 rgba(185, 14, 14, 0);
+  }
+}
+
+@keyframes gradient{
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
   }
 }
 /*End animations*/
@@ -566,8 +744,10 @@ input[type="submit"]:hover{
 
 @media screen and (max-width: 768px){
   body{
-    background: url("images/purplelines.jpg") no-repeat center fixed;
-    background-size: cover;
+    background-color: rgb(28, 28, 30);
+    background: linear-gradient(45deg, #181661, rgb(11, 70, 70),#5f0d0d, #480a5f);
+    background-size: 300%;
+    animation: gradient 15s ease infinite;
   }
 
   .landing-text h1{
