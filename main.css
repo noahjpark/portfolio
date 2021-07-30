@@ -554,7 +554,7 @@ li{
 }
 
 .icon-container i{
-  color: #;
+  color: lightgray;
   font-size: 5rem;
   margin: auto;
   transform: rotate(-45deg);
@@ -776,7 +776,7 @@ li{
   }
 
   .section-heading h1{
-    font-size 3rem;
+    font-size: 3rem;
   }
 
   .about-details .nav-list{
