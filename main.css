@@ -115,6 +115,7 @@ span {
 
 .role {
   width: 100%;
+  padding-left: 5px;
   position: relative;
   display: flex;
   align-items: center;
@@ -535,7 +536,7 @@ li{
 }
 
 .skill h4{
-  background: #ffffff;
+  background: lightgray;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Montserrat', 'Lato';
@@ -553,7 +554,7 @@ li{
 }
 
 .icon-container i{
-  color: #22f688;
+  color: #;
   font-size: 5rem;
   margin: auto;
   transform: rotate(-45deg);
@@ -566,7 +567,7 @@ li{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5rem;
+  margin-bottom: 15rem;
 }
 
 .portfolio-item:last-child{
@@ -601,12 +602,13 @@ li{
   margin-top: 2.5 rem;
   font-size: 1.5 rem;
   text-transform: uppercase;
-  color: #000000;
+  color: lightgray;
   transition: color 650ms;
+  cursor: pointer;
 }
 
 .portfolio-description .cta:hover{
-  color: #8617a1;
+  color: black;
 }
 /*End portfolio*/
 
